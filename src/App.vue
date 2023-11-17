@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navbar>
+  </Navbar>
+
+  <div class="banner">
+    
+    <router-view>
+
+    </router-view>
+  </div>
+
+
+  <div class="footer">
+    <p>&copy; 2022 Jakub Borkowski</p>
+  </div>
+
 </template>
 
+
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Navbar from './components/Navbar.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components:{
+    Navbar,
+  },
 }
+
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.banner{
+  width: 100%;
+  min-height:100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(./assets/tlo.png);
+  background-size: cover;
+  background-position: center;
 }
+
 </style>
+
